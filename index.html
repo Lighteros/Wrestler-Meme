@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wrestler | $WRESTLER on Robinhood Chain</title>
+    <meta
+      name="description"
+      content="Wrestler ($WRESTLER) on Robinhood Chain. I identify as a wrestler."
+    />
+    <link rel="icon" type="image/webp" href="logo.webp" />
+    <link rel="apple-touch-icon" href="logo.webp" />
+    <link rel="preload" as="image" href="logo.webp" />
+    <meta property="og:title" content="Wrestler | $WRESTLER" />
+    <meta
+      property="og:description"
+      content="I identify as a wrestler. The pixel champion of Robinhood Chain."
+    />
+    <meta property="og:image" content="logo.webp" />
+    <meta name="theme-color" content="#070B16" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/ring.css" />
+  </head>
+  <body>
+    <canvas id="cosmos" aria-hidden="true"></canvas>
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="gridfloor" aria-hidden="true"></div>
+    <div class="scan" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <header class="rail" id="rail">
+      <a class="sigil" href="#hero">
+        <span class="sigil-face">
+          <img src="logo.webp" alt="Wrestler" />
+        </span>
+        <span class="sigil-type">
+          <strong>Wrestler</strong>
+          <small>$WRESTLER</small>
+        </span>
+      </a>
+      <nav class="lanes" id="lanes" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#howtobuy">How to Buy</a>
+        <a href="#chart">Chart</a>
+        <a href="#joinus">Join Us</a>
+      </nav>
+      <div class="rail-end">
+        <a
+          class="chip-buy"
+          href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xaB528169DCC80d68837a33b1e2b866bB7D7EE301"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="icons/uniswap.svg" alt="" />
+          <span>Buy $WRESTLER</span>
+        </a>
+        <button class="clasp" id="clasp" type="button" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="ropes" aria-hidden="true">
+          <i class="rope cyan"></i>
+          <i class="rope rose"></i>
+          <i class="rope gold"></i>
+        </div>
+
+        <div class="hero-stage">
+          <figure class="champ" id="champ">
+            <span class="orbit orbit-a"></span>
+            <span class="orbit orbit-b"></span>
+            <span class="orbit orbit-c"></span>
+            <span class="champ-glow"></span>
+            <img src="logo.webp" alt="Wrestler pixel portrait" />
+          </figure>
+
+          <div class="hero-copy">
+            <p class="tag rise">Robinhood Chain memecoin</p>
+            <h1 class="rise" data-wait="70">Wrestler</h1>
+            <p class="vow rise" data-wait="140">I identify as a wrestler!!</p>
+            <p class="lede rise" data-wait="200">
+              A cyan-faced champion stepped into a dark ring and found a
+              galaxy staring back. $WRESTLER is that standoff: pixel flesh
+              against a nebula with fists.
+            </p>
+
+            <dl class="board rise" data-wait="240">
+              <div>
+                <dt>Name</dt>
+                <dd>Wrestler</dd>
+              </div>
+              <div>
+                <dt>Symbol</dt>
+                <dd>$WRESTLER</dd>
+              </div>
+              <div>
+                <dt>Chain</dt>
+                <dd>Robinhood</dd>
+              </div>
+            </dl>
+
+            <button
+              class="ca rise"
+              id="copyCa"
+              type="button"
+              data-ca="0xaB528169DCC80d68837a33b1e2b866bB7D7EE301"
+              data-wait="280"
+            >
+              <span>CA</span>
+              <code>0xaB528169DCC80d68837a33b1e2b866bB7D7EE301</code>
+              <em id="copyCaLabel">Copy</em>
+            </button>
+
+            <div class="hero-acts rise" data-wait="320">
+              <a
+                class="btn btn-fill tug"
+                href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xaB528169DCC80d68837a33b1e2b866bB7D7EE301"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="icons/uniswap.svg" alt="" />
+                Buy on Uniswap
+              </a>
+              <a
+                class="btn btn-ghost tug"
+                href="https://dexscreener.com/robinhood/0xab528169dcc80d68837a33b1e2b866bb7d7ee301"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="icons/dexscreener.svg" alt="" />
+                Dexscreener
+              </a>
+              <a
+                class="btn btn-ghost tug"
+                href="https://x.com/wrestler_rh"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="icons/x.svg" alt="" />
+                Follow
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticker" aria-hidden="true">
+          <div class="ticker-track">
+            <span>I IDENTIFY AS A WRESTLER</span>
+            <span>$WRESTLER</span>
+            <span>ROBINHOOD CHAIN</span>
+            <span>PIXEL VS NEBULA</span>
+            <span>I IDENTIFY AS A WRESTLER</span>
+            <span>$WRESTLER</span>
+            <span>ROBINHOOD CHAIN</span>
+            <span>PIXEL VS NEBULA</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="wrap">
+          <div class="about-grid">
+            <div class="about-copy">
+              <p class="tag rise">About</p>
+              <h2 class="rise" data-wait="60">The champion in the dark.</h2>
+              <p class="rise" data-wait="120">
+                Wrestler is a Robinhood Chain memecoin built around one
+                sentence and one face. Cyan skin. Magenta cheeks. A navy
+                stripe. He does not ask the cosmos for permission.
+              </p>
+              <p class="rise" data-wait="180">
+                The match is already underway: a pixel body locked against a
+                gold-and-violet silhouette made of stars. That is the whole
+                story. Identity as a hold. Market as a ring.
+              </p>
+              <ul class="traits">
+                <li class="rise" data-wait="200">
+                  <span>01</span>
+                  <div>
+                    <strong>Name</strong>
+                    <p>Wrestler. The only name on the card.</p>
+                  </div>
+                </li>
+                <li class="rise" data-wait="240">
+                  <span>02</span>
+                  <div>
+                    <strong>Symbol</strong>
+                    <p>$WRESTLER on Robinhood Chain.</p>
+                  </div>
+                </li>
+                <li class="rise" data-wait="280">
+                  <span>03</span>
+                  <div>
+                    <strong>Vow</strong>
+                    <p>I identify as a wrestler!!</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <aside class="about-plate rise" data-wait="100">
+              <div class="plate-ring">
+                <img src="logo.webp" alt="Wrestler logo" />
+              </div>
+              <p>Official portrait. The lockup for the ring.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="howtobuy" id="howtobuy">
+        <div class="wrap">
+          <div class="section-head rise">
+            <p class="tag">How to Buy</p>
+            <h2>Four moves to enter the ring.</h2>
+            <p class="lead">
+              $WRESTLER trades on Uniswap v4 on Robinhood Chain. Confirm the
+              contract before you swap.
+            </p>
+          </div>
+
+          <ol class="moves">
+            <li class="move rise">
+              <em>01</em>
+              <h3>Ready a wallet</h3>
+              <p>
+                Use a wallet that can add custom networks. Keep the seed
+                phrase offline. This is your corner of the arena.
+              </p>
+            </li>
+            <li class="move rise" data-wait="80">
+              <em>02</em>
+              <h3>Step onto Robinhood</h3>
+              <p>
+                Add Robinhood Chain and fund the wallet with ETH on that
+                network. The explorer is the official record.
+              </p>
+              <a
+                class="text-link"
+                href="https://robinhoodchain.blockscout.com/token/0xaB528169DCC80d68837a33b1e2b866bB7D7EE301"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="icons/blockscout.svg" alt="" />
+                Robinhood Blockscout
+              </a>
+            </li>
+            <li class="move rise" data-wait="160">
+              <em>03</em>
+              <h3>Swap on Uniswap</h3>
+              <p>
+                Open Uniswap on Robinhood Chain, paste the $WRESTLER
+                contract, and swap. Read the ticker twice.
+              </p>
+              <a
+                class="text-link"
+                href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xaB528169DCC80d68837a33b1e2b866bB7D7EE301"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="icons/uniswap.svg" alt="" />
+                Open Uniswap
+              </a>
+            </li>
+            <li class="move rise" data-wait="240">
+              <em>04</em>
+              <h3>Watch the chart</h3>
+              <p>
+                Confirm the fill on Dexscreener Robinhood pairs. That is the
+                only chart this site embeds.
+              </p>
+              <a
+                class="text-link"
+                href="https://dexscreener.com/robinhood/0xab528169dcc80d68837a33b1e2b866bb7d7ee301"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="icons/dexscreener.svg" alt="" />
+                Open Dexscreener
+              </a>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="chart" id="chart">
+        <div class="wrap">
+          <div class="section-head rise">
+            <p class="tag">Chart</p>
+            <h2>$WRESTLER on Dexscreener</h2>
+            <p class="lead">
+              Live Robinhood Chain pairs only. No extra widgets. The market
+              is the embed.
+            </p>
+            <div class="chart-links">
+              <a
+                class="btn btn-ghost tug"
+                href="https://dexscreener.com/robinhood/0xab528169dcc80d68837a33b1e2b866bb7d7ee301"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="icons/dexscreener.svg" alt="" />
+                Token on Dexscreener
+              </a>
+              <a
+                class="btn btn-ghost tug"
+                href="https://dexscreener.com/robinhood/0xa6c834246ed663033703a0eff3e75b6139d6b6e608cdc3c3693ae8e401317d6d"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="icons/dexscreener.svg" alt="" />
+                Main WRESTLER / USDG pair
+              </a>
+            </div>
+          </div>
+
+          <div class="jumbotron rise" data-wait="100">
+            <iframe
+              title="Dexscreener Robinhood chart for Wrestler"
+              src="https://dexscreener.com/robinhood/0xab528169dcc80d68837a33b1e2b866bb7d7ee301?embed=1&theme=dark&trades=0&info=0"
+              loading="lazy"
+              allow="clipboard-write"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="joinus" id="joinus">
+        <div class="wrap">
+          <div class="section-head rise">
+            <p class="tag">Join Us</p>
+            <h2>I identify as a wrestler!!</h2>
+            <p class="lead">
+              The ring is public. Follow the account, watch the chart, and
+              keep the vow exact.
+            </p>
+          </div>
+
+          <figure class="poster rise">
+            <img
+              src="banner.webp"
+              alt="Pixel wrestler facing a cosmic nebula opponent"
+            />
+          </figure>
+
+          <div class="join-row rise" data-wait="100">
+            <a
+              class="btn btn-fill tug"
+              href="https://x.com/wrestler_rh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="icons/x.svg" alt="" />
+              Follow @wrestler_rh
+            </a>
+            <a
+              class="btn btn-ghost tug"
+              href="https://dexscreener.com/robinhood/0xab528169dcc80d68837a33b1e2b866bb7d7ee301"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="icons/dexscreener.svg" alt="" />
+              Chart
+            </a>
+            <a
+              class="btn btn-ghost tug"
+              href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xaB528169DCC80d68837a33b1e2b866bB7D7EE301"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="icons/uniswap.svg" alt="" />
+              Buy
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-inner">
+        <a class="sigil" href="#hero">
+          <span class="sigil-face">
+            <img src="logo.webp" alt="" />
+          </span>
+          <span class="sigil-type">
+            <strong>Wrestler</strong>
+            <small>$WRESTLER</small>
+          </span>
+        </a>
+        <p>I identify as a wrestler. Robinhood Chain.</p>
+        <div class="foot-links">
+          <a
+            href="https://x.com/wrestler_rh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+          >
+            <img src="icons/x.svg" alt="" />
+          </a>
+          <a
+            href="https://dexscreener.com/robinhood/0xab528169dcc80d68837a33b1e2b866bb7d7ee301"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dexscreener"
+          >
+            <img src="icons/dexscreener.svg" alt="" />
+          </a>
+          <a
+            href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xaB528169DCC80d68837a33b1e2b866bB7D7EE301"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Uniswap"
+          >
+            <img src="icons/uniswap.svg" alt="" />
+          </a>
+          <a
+            href="https://robinhoodchain.blockscout.com/token/0xaB528169DCC80d68837a33b1e2b866bB7D7EE301"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Blockscout"
+          >
+            <img src="icons/blockscout.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/ring.js"></script>
+  </body>
+</html>
