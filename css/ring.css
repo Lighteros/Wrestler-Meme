@@ -908,6 +908,10 @@ h2 {
     justify-items: center;
   }
 
+  .board {
+    grid-template-columns: 1fr;
+  }
+
   .chip-buy span {
     display: none;
   }
